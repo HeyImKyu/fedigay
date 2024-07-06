@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification Page</title>
+    <style>
+        :root {
+            --gradient-border: linear-gradient(
+                180deg,
+                rgba(255, 0, 0, 1) 0%,
+                rgba(255, 154, 0, 1) 10%,
+                rgba(208, 222, 33, 1) 20%,
+                rgba(79, 220, 74, 1) 30%,
+                rgba(63, 218, 216, 1) 40%,
+                rgba(47, 201, 226, 1) 50%,
+                rgba(28, 127, 238, 1) 60%,
+                rgba(95, 21, 242, 1) 70%,
+                rgba(186, 12, 248, 1) 80%,
+                rgba(251, 7, 217, 1) 90%,
+                rgba(255, 0, 0, 1) 100%
+            );
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../bg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            text-align: center;
+        }
+
+        .verification-wrapper {
+            backdrop-filter: blur(10px) brightness(0.8);
+            padding: 20px 40px;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .verification-wrapper::before,
+        .verification-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: var(--gradient-border);
+            pointer-events: none;
+        }
+
+        .verification-wrapper::before {
+            left: 0;
+        }
+
+        .verification-wrapper::after {
+            right: 0;
+        }
+
+        .verification-text {
+            font-size: 24px;
+            margin-bottom: 0;
+        }
+
+        .status__wrapper-direct::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 4px; /* Adjust width as needed */
+            background: var(--gradient-border);
+        }
+    </style>
+</head>
+<body>
+    <div class="verification-wrapper">
+        <p class="verification-text">This page is here for verification UwU :3</p>
+	<a rel="me" href="https://kyuti.es/@HeyImKyu">Mastodon</a>
+    </div>
+</body>
+</html>
